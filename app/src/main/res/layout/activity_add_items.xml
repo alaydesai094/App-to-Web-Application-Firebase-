@@ -29,4 +29,11 @@
         android:layout_height="wrap_content"
         android:onClick="submitPressed"
         android:text="submit" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="BackButton"
+        android:text="Back" />
 </LinearLayout>

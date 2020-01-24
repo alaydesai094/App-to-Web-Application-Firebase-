@@ -3,6 +3,7 @@ package com.example.project1;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -87,47 +89,58 @@ public class Comment extends AppCompatActivity {
     }
 
 
+    public void BackButton(View view) {
 
+        Log.d("Alay", " Add button!!!!");
 
-
-    public void replyPressed(View v) {
-
-        // 0. disable the button
-        Button b = (Button) findViewById(R.id.replyButton);
-        //b.setEnabled(false);
-
-        Log.d(TAG, "Submit Buttom");
-        // 1. get user input
-        String reply = EditReply.getText().toString();
-
-//        // 4. create a dictionary to store your data
-//        // - We will be sending this dictionary to Firebase
-        Map<String, Object> gobieData = new HashMap<>();
-        gobieData.put("Reply", reply);
-
-        Log.d(TAG,"Going to database");
-        //5. connect to firebase
-        // Add a new document with a ID = gameID
-
-        final DocumentReference ref = db.collection("gobie").document("UID2");
-        // Set the "isCapital" field of the city 'DC'
-       ref
-                .update(gobieData)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Log.d(TAG, "DocumentSnapshot successfully updated!");
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.w(TAG, "Error updating document", e);
-                    }
-                });
+        // creating a segue in Android
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
 
     }
 
+
+
+
+
+//    public void replyPressed(View v) {
+//
+//        // 0. disable the button
+//        Button b = (Button) findViewById(R.id.replyButton);
+//        //b.setEnabled(false);
+//
+//        Log.d(TAG, "Submit Buttom");
+//        // 1. get user input
+//        String reply = EditReply.getText().toString();
+//
+////        // 4. create a dictionary to store your data
+////        // - We will be sending this dictionary to Firebase
+//        Map<String, Object> gobieData = new HashMap<>();
+//        gobieData.put("Reply", reply);
+//
+//        Log.d(TAG,"Going to database");
+//        //5. connect to firebase
+//        // Add a new document with a ID = gameID
+//
+//        final DocumentReference ref = db.collection("gobie").document("UID1");
+//        // Set the "isCapital" field of the city 'DC'
+//       ref
+//                .update(gobieData)
+//                .addOnSuccessListener(new OnSuccessListener<Void>() {
+//                    @Override
+//                    public void onSuccess(Void aVoid) {
+//                        Log.d(TAG, "DocumentSnapshot successfully updated!");
+//                    }
+//                })
+//                .addOnFailureListener(new OnFailureListener() {
+//                    @Override
+//                    public void onFailure(@NonNull Exception e) {
+//                        Log.w(TAG, "Error updating document", e);
+//                    }
+//                });
+//
+//    }
+//
 
 
 

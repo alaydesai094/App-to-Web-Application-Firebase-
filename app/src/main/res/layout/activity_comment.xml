@@ -25,19 +25,11 @@
         android:layout_height="wrap_content"
         android:text="Comment" />
 
-    <EditText
-        android:id="@+id/EditReply"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Reply"
-        android:inputType="textPersonName" />
-
     <Button
-        android:id="@+id/replyButton"
+        android:id="@+id/BackButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="replyPressed"
-        android:text="Reply" />
+        android:onClick="BackButton"
+        android:text="Back" />
 
 </LinearLayout>

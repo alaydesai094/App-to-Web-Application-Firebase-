@@ -3,6 +3,7 @@ package com.example.project1;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -104,6 +105,18 @@ public class AddItems extends AppCompatActivity {
                     }
                 });
 
+
+    }
+
+
+
+    public void BackButton(View view) {
+
+        Log.d("Alay", " Add button!!!!");
+
+        // creating a segue in Android
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
 
     }
 
