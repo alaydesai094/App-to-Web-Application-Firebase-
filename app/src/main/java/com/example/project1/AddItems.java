@@ -25,8 +25,6 @@ import java.util.Map;
 public class AddItems extends AppCompatActivity {
 
 
-
-
     // DEBUG variable
     public static final String TAG = "Alay";
 
@@ -69,19 +67,16 @@ public class AddItems extends AppCompatActivity {
 
         // 0. disable the button
         Button b = (Button) findViewById(R.id.submitButton);
-        b.setEnabled(false);
+        //b.setEnabled(false);
 
         num = num + 1;
         id = "UID"+ num;
 
 
-        Log.d(TAG, "OKAY!!!!+++++=");
+        Log.d(TAG, "Submit Buttom");
         // 1. get user input
         String name = usernameBox.getText().toString();
         String note = noteBox.getText().toString();
-
-
-
 
 
         // 4. create a dictionary to store your data
@@ -89,7 +84,6 @@ public class AddItems extends AppCompatActivity {
         Map<String, Object> gobieData = new HashMap<>();
         gobieData.put("name", name);
         gobieData.put("note", note);
-        //gobieData.put("id",id);
 
         Log.d(TAG,"Going to database");
         //5. connect to firebase
@@ -100,13 +94,13 @@ public class AddItems extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        //Log.d(TAG, "Added gobieData ref no = " + ref.getId());
+                        Log.d(TAG, "Data added to firebase");
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        // Log.d(TAG, "Error adding document", e);
+                         Log.d(TAG, "Error adding document", e);
                     }
                 });
 

@@ -12,6 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="AddButton"
-        android:text="Button" />
+        android:text="Add Items" />
+
+    <Button
+        android:id="@+id/CommentBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="CommentButton"
+        android:text="Comments" />
 
 </LinearLayout>
