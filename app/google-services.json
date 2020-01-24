@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1097435917301",
+    "firebase_url": "https://gobieapp-7eb77.firebaseio.com",
+    "project_id": "gobieapp-7eb77",
+    "storage_bucket": "gobieapp-7eb77.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097435917301:android:36f26eb5123a4cb2ddcebc",
+        "android_client_info": {
+          "package_name": "com.example.project1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1097435917301-4kflo7jjcap9r9j8c2qffue7mrm2dg9k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.project1",
+            "certificate_hash": "1aa61c79bed4ca89dca2c4782aa2eaf1d285bd63"
+          }
+        },
+        {
+          "client_id": "1097435917301-lv3mudb2asigk71drf2rr5pdd3najgq9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0jukW1V8N9X5Kz-67vJRyA9PbHbvCU8c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1097435917301-lv3mudb2asigk71drf2rr5pdd3najgq9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
