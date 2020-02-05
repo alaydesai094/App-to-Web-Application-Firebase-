@@ -5,17 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".Home">
+
+    <Button
+        android:id="@+id/Addbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="AddButton"
+        android:text="Add Item" />
+
+    <Button
+        android:id="@+id/CommentBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="CommentButton"
+        android:text="Comment" />
 
     <Button
         android:id="@+id/Logoutbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+        android:onClick="LogoutButton"
+        android:text="Logout" />
 </LinearLayout>

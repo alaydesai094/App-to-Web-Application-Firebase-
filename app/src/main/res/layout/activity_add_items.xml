@@ -24,6 +24,19 @@
         android:inputType="textPersonName" />
 
     <Button
+        android:id="@+id/Choosebtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="photoButtonPressed"
+        android:text="Choose Image" />
+
+    <ImageView
+        android:id="@+id/ShowImg"
+        android:layout_width="match_parent"
+        android:layout_height="186dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <Button
         android:id="@+id/submitButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
