@@ -78,12 +78,12 @@ public class Comment extends AppCompatActivity {
 
                         String name = document.getData().get("name").toString();
                         String note = document.getData().get("note").toString();
-                        //String comment = document.getData().get("Comment").toString();
+                        String comment = document.getData().get("Comment").toString();
 
 
                         ReadName.setText(name);
                         ReadNote.setText(note);
-                       // ReadComment.setText(comment);
+                        ReadComment.setText(comment);
 
                     } else {
                         Log.d(TAG, "No such document");

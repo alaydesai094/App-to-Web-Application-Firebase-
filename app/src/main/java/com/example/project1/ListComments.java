@@ -54,7 +54,7 @@ public class ListComments extends AppCompatActivity {
 
 
         db.collection("gobie")
-               // .whereEqualTo("CommentType","true")  // This is to get list of people commented
+                .whereEqualTo("CommentType", "true")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -70,17 +70,14 @@ public class ListComments extends AppCompatActivity {
                                 String note = document.getData().get("note").toString();
 
                                 // uncomment this to see the comments in next page
-                                
-                                //String comment = document.getData().get("Comment").toString();
+                                 
+                                String comment = document.getData().get("Comment").toString();
 
 
                                 items.add(name);
                                 ids.add(id);
 
                                 showdata();
-
-
-
 
 
 
