@@ -43,6 +43,8 @@ public class Comment extends AppCompatActivity {
     String id;
     int num;
 
+    String passID;
+
     // Create the database
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -51,6 +53,13 @@ public class Comment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comment);
 
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            passID = extras.getString("key");
+            //The key argument here must match that used in the other activity
+        }
+
+
         // setup the edittext outlet
 
         ReadName = (TextView) findViewById(R.id.ReadName);
@@ -58,7 +67,7 @@ public class Comment extends AppCompatActivity {
         ReadComment = (TextView) findViewById(R.id.ReadComment);
 
 
-        DocumentReference docRef = db.collection("gobie").document("UID2");
+        DocumentReference docRef = db.collection("gobie").document(passID);
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -69,12 +78,12 @@ public class Comment extends AppCompatActivity {
 
                         String name = document.getData().get("name").toString();
                         String note = document.getData().get("note").toString();
-                        String comment = document.getData().get("Comment").toString();
+                        //String comment = document.getData().get("Comment").toString();
 
 
                         ReadName.setText(name);
                         ReadNote.setText(note);
-                        ReadComment.setText(comment);
+                       // ReadComment.setText(comment);
 
                     } else {
                         Log.d(TAG, "No such document");

@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
@@ -51,7 +52,7 @@ public class Home extends AppCompatActivity {
         Log.d("Alay", " Comment button!!!!");
 
         // creating a segue in Android
-        Intent i = new Intent(this, Comment.class);
+        Intent i = new Intent(this, ListComments.class);
         startActivity(i);
 
     }
